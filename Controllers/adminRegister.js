@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 
 const registerAdmin = async (req, res) => {
   try {
-    const { name, email, password, role, phone, address, gstNumber } = req.body;
+    const { name, email, password, role, phone, address} = req.body;
 
     const existingUser = await user.findOne({ email });
     if (existingUser) {
@@ -13,10 +13,10 @@ const registerAdmin = async (req, res) => {
       name,
       email,
       password: await bcrypt.hash(password, 10),
-      role:"admin",
+      role,
       phone,
       address,
-      gstNumber,
+
     });
 
     await newUser.save();
@@ -27,4 +27,4 @@ const registerAdmin = async (req, res) => {
   }
 };
 
-module.exports = registerAdmin;       
+module.exports = registerAdmin; 

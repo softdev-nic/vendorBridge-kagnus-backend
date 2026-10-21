@@ -3,7 +3,7 @@ const { CATEGORIES } = require("../constants/categories");
 
 const rfqSchema = new mongoose.Schema(
   {
-    rfqNumber: { type: String, unique: true }, // auto-generate, e.g. RFQ-2026-0001
+    rfqNumber: { type: String, unique: true }, 
     title: { type: String, required: true },
     description: String,
     category: { type: String, enum: CATEGORIES, required: true },

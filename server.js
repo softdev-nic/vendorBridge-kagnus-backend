@@ -12,7 +12,9 @@ app.use(cors());
 
 app.use(express.json());
 
-// Define your routes here
+app.use("/api/register", require("./Controllers/adminRegister"));
+app.use("/api/login", require("./Controllers/login"));
+app.use("/api/registerCompany", require("./Controllers/companyRegistration"));
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 }); 

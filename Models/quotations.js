@@ -19,6 +19,10 @@ const QuotationSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    approver: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
     items: [
       {
         itemName: {

@@ -56,10 +56,7 @@ const userSchema = new mongoose.Schema(
         required: true,
       },    
     },
-    gstNumber: {
-      type: String,
-      required: true,
-    },
+  
     companyName: {
       type: String,
       required: true,
