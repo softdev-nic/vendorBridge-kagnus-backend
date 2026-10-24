@@ -1,4 +1,4 @@
-const organization = require("../Models/organizationSchema");
+const organization = require("../Models/organization");
 const user = require("../Models/userSchema");
 const registerCompany = async (req, res) => {
   try {
